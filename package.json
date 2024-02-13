@@ -1,0 +1,35 @@
+{
+  "name": "@sy-records/docsify-loading",
+  "version": "1.0.0",
+  "description": "A plugin that supports the use of loading in docsify.",
+  "main": "src/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sy-records/docsify-loading.git"
+  },
+  "keywords": [
+    "docsify",
+    "loading",
+    "markdown",
+    "images"
+  ],
+  "author": "sy-records",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sy-records/docsify-loading/issues"
+  },
+  "homepage": "https://github.com/sy-records/docsify-loading#readme",
+  "devDependencies": {
+    "cross-env": "^6.0.3",
+    "rollup": "^1.23.1",
+    "rollup-plugin-async": "^1.2.0",
+    "rollup-plugin-buble": "^0.19.8",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-replace": "^2.2.0",
+    "rollup-plugin-uglify": "^6.0.4"
+  },
+  "scripts": {
+    "build": "cross-env NODE_ENV=production node build/build.js"
+  }
+}
