@@ -1,15 +1,14 @@
-const loading = function (hook) {
-    hook.afterEach(function (html, next) {
-        html = html.replace(/<img(.*?)>/g, function (match, p1) {
-            if (p1.indexOf('loading=') === -1) {
-                return match.replace('>', ' loading="lazy">');
+function loading(hook) {
+    hook.afterEach((html, next) => {
+        html = html.replace(/<img\s+([^>]*?)>/g, (match, attrs) => {
+            if (attrs.includes('loading=') || /src=["'][^"']+\.svg["']/.test(attrs)) {
+                return match;
             }
-            return match;
+            return `<img ${attrs} loading="lazy">`;
         });
-
         next(html);
     });
-};
+}
 
-$docsify = $docsify || {};
-$docsify.plugins = [].concat(loading, $docsify.plugins || []);
+window.$docsify = window.$docsify || {};
+$docsify.plugins = [...($docsify.plugins || []), loading];
