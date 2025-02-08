@@ -1,6 +1,6 @@
 {
   "name": "@sy-records/docsify-loading",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "A plugin that supports the use of loading in docsify.",
   "main": "dist/index.js",
   "repository": {

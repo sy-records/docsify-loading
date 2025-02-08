@@ -11,5 +11,5 @@ A plugin that supports the use of [Browser-level image lazy loading](https://web
 ## Usage
 
 ```html
-<script src="//cdn.jsdelivr.net/npm/@sy-records/docsify-loading/lib/index.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/@sy-records/docsify-loading/dist/index.min.js"></script>
 ```
